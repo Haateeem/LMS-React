@@ -1,0 +1,66 @@
+/* src/components/Navbar/Navbar.css */
+.navbar {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav_custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.clock {
+    font-size: 16px;
+    color: #333;
+}
+
+.golayi-frame {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.golayi {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.admin-profile {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-profile p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.dropdown-item {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    text-decoration: underline;
+}
