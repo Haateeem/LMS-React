@@ -1,66 +1,46 @@
-/* src/components/Navbar/Navbar.css */
-.navbar {
-    background-color: #f8f9fa;
-    padding: 10px 20px;
-    border-bottom: 1px solid #e0e0e0;
+/* Header.css */
+.search {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Allow the search bar to take available space */
+  background-color: aliceblue;
 }
 
-.nav_custom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.search-icon {
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
+.input-root {
+  color: inherit;
 }
 
-.menu-btn img {
-    width: 30px;
-    height: 30px;
+.input-input {
+  padding: 8px 8px 8px 0;
+  padding-left: calc(1em + 32px);
+  width: 100%;
 }
 
-.clock {
-    font-size: 16px;
-    color: #333;
+.section-desktop {
+  display: flex;
+  align-items: center;
 }
 
-.golayi-frame {
-    background: none;
-    border: none;
-    cursor: pointer;
+.avatar {
+  margin-left: 16px;
 }
 
-.golayi {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(212, 212, 212);
 }
 
-.admin-profile {
-    position: absolute;
-    right: 0;
-    top: 60px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.admin-profile p {
-    margin: 0;
-    padding: 5px 0;
-}
-
-.dropdown-item {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.dropdown-item:hover {
-    text-decoration: underline;
+.appbar {
+  height: 100%;
+  width: 100%;
 }

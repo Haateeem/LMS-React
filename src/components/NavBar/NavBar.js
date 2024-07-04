@@ -1,55 +1,57 @@
-import React, { useEffect, useState } from "react";
-import "./NavBar.css"; // Make sure you have the corresponding CSS file for styling
+// NavBar.js
+import React from "react";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  InputBase,
+  Badge,
+  Avatar,
+} from "@mui/material";
+import {
+  Search as SearchIcon,
+  Notifications as NotificationsIcon,
+  Chat as ChatIcon,
+} from "@mui/icons-material";
+import "./NavBar.css";
 
-function NavBar() {
-  const [showProfile, setShowProfile] = useState(false);
-  const toggleProfile = () => setShowProfile(!showProfile);
-
+const NavBar = () => {
   return (
-    <nav className="navbar bg-body-tertiary">
-      <div className="container-fluid nav_custom">
-        <button className="menu-btn">
-          <img src="../images/more.png" alt="Menu Icon" />
-        </button>
-        <div className="nav_right">
-          {/* Uncomment if you have a bell notification icon */}
-          {/* <button onClick={() => toggleNotificationPanel()} className="bell-icon" id="bell-icon">
-                        <img src="../images/bell2.png" alt="Notification Icon" width="40" />
-                    </button> */}
-          <button className="golayi-frame" onClick={toggleProfile}>
-            <img
-              className="golayi"
-              id="auto-change-dp"
-              src="../images/default.png"
-              alt="Profile Button"
-            />
-          </button>
-          {showProfile && (
-            <div id="admin-profile" className="admin-profile">
-              <p>
-                <strong>Name:</strong> <span id="admin-name">Admin Name</span>
-              </p>
-              <p>
-                <strong>Email:</strong>{" "}
-                <span id="admin-email">admin@example.com</span>
-              </p>
-              <p>
-                <strong>Admin ID:</strong> <span id="admin-id">12345</span>
-              </p>
-              <p>
-                <strong>Contact:</strong>{" "}
-                <span id="admin-contact">+1234567890</span>
-              </p>
-              <hr />
-              <a className="dropdown-item" href="./LogIn.html">
-                Sign out
-              </a>
-            </div>
-          )}
+    <AppBar className="appbar" position="static" color="default">
+      <Toolbar className="toolbar">
+        <div className="search">
+          <div className="search-icon">
+            <SearchIcon />
+          </div>
+          <InputBase
+            placeholder="Search anything…"
+            classes={{
+              root: "input-root",
+              input: "input-input",
+            }}
+            inputProps={{ "aria-label": "search" }}
+          />
         </div>
-      </div>
-    </nav>
+        <div className="section-desktop">
+          <IconButton color="inherit">
+            <Badge badgeContent={4} color="secondary">
+              <NotificationsIcon />
+            </Badge>
+          </IconButton>
+          <IconButton color="inherit">
+            <Badge badgeContent={4} color="secondary">
+              <ChatIcon />
+            </Badge>
+          </IconButton>
+          <Avatar className="avatar">A</Avatar>
+          <Typography variant="subtitle1" color="inherit">
+            Abu Bin Ishityak
+          </Typography>
+        </div>
+      </Toolbar>
+    </AppBar>
   );
-}
+};
 
 export default NavBar;
